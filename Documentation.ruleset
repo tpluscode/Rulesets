@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="tpluscode unit test rules" Description="Code analysis rules for unit test projects" ToolsVersion="14.0">
+<RuleSet Name="tpluscode unit test rules" Description="Documentation code analysis rules for projects" ToolsVersion="14.0">
   <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
     <Rule Id="SA1600" Action="Error" />
     <Rule Id="SA1601" Action="Error" />
