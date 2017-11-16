@@ -1,0 +1,21 @@
+install:
+  - choco install gitversion.portable -pre -y
+  
+before_build:  
+  - .paket\paket.bootstrapper.exe prerelease
+  - ps: gitversion /l console /output buildserver
+
+build_script:
+  - .paket\paket.exe pack --template Library.template --version %GitVersion_NuGetVersion%
+  - .paket\paket.exe pack --template UnitTests.template --version %GitVersion_NuGetVersion%
+  - .paket\paket.exe pack --template NoDocumentation.template --version %GitVersion_NuGetVersion%
+
+artifacts:
+  - path: '*.nupkg'
+
+deploy:
+  - provider: Environment
+    name: MyGet
+    on:
+      branch: /v\d\.\d(\.\d)?/
+      appveyor_repo_tag: true

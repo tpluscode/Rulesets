@@ -1,0 +1,8 @@
+type file
+id tpluscode.Library.Ruleset
+authors tpluscode
+description
+  Library ruleset
+files
+  Library.ruleset ==> tools
+  tpluscode.Library.ruleset.props ==> build
