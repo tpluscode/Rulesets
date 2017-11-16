@@ -6,9 +6,9 @@ before_build:
   - ps: gitversion /l console /output buildserver
 
 build_script:
-  - .paket\paket.exe pack --template Library.template --version %GitVersion_NuGetVersion%
-  - .paket\paket.exe pack --template UnitTests.template --version %GitVersion_NuGetVersion%
-  - .paket\paket.exe pack --template NoDocumentation.template --version %GitVersion_NuGetVersion%
+  - .paket\paket.exe pack --template Library.template --version %GitVersion_NuGetVersion% .
+  - .paket\paket.exe pack --template UnitTests.template --version %GitVersion_NuGetVersion% .
+  - .paket\paket.exe pack --template NoDocumentation.template --version %GitVersion_NuGetVersion% .
 
 artifacts:
   - path: '*.nupkg'
