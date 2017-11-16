@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="tpluscode default rules" Description="Code analysis rules without documentation" ToolsVersion="14.0">
+  <Rules AnalyzerId="AsyncUsageAnalyzers" RuleNamespace="AsyncUsageAnalyzers">
+    <Rule Id="AvoidAsyncSuffix" Action="None" />
+    <Rule Id="UseAsyncSuffix" Action="None" />
+  </Rules>
   <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
     <Rule Id="CA1001" Action="Warning" />
     <Rule Id="CA1009" Action="Warning" />
