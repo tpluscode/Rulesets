@@ -1,5 +1,6 @@
 type file
 id tpluscode.Library.Ruleset
+developmentDependency true
 authors tpluscode
 description
   Library ruleset

@@ -1,5 +1,6 @@
 type file
 id tpluscode.UnitTests.Ruleset
+developmentDependency true
 authors tpluscode
 description
   UnitTests ruleset

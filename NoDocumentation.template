@@ -1,5 +1,6 @@
 type file
 id tpluscode.NoDocumentation.Ruleset
+developmentDependency true
 authors tpluscode
 description
   NoDocumentation ruleset
