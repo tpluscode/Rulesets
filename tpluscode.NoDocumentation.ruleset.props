@@ -1,6 +1,8 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <PropertyGroup>
+    <PropertyGroup Condition=" !($(TargetFramework.StartsWith('netstandard')) Or $(TargetFramework.StartsWith('netcore'))) ">
         <RunCodeAnalysis>true</RunCodeAnalysis>
+    </PropertyGroup>
+    <PropertyGroup>
         <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)\..\tools\NoDocumentation.ruleset</CodeAnalysisRuleSet>
     </PropertyGroup>
 </Project>
